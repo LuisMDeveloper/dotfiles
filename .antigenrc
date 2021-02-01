@@ -1,0 +1,30 @@
+# Load oh-my-zsh library.
+antigen use oh-my-zsh
+
+# Load bundles from the default repo (oh-my-zsh).
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle edit-command-line
+antigen bundle z
+antigen bundle colored-man-pages
+antigen bundle thefuck
+
+# Load bundles from external repos.
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Theme.
+antigen theme denysdovhan/spaceship-prompt
+SPACESHIP_CHAR_SYMBOL="[🧠] "
+
+# Extra
+
+# homebrew/command-not-found
+HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+if [ -f "$HB_CNF_HANDLER" ]; then
+source "$HB_CNF_HANDLER";
+fi
+
+# Tell Antigen that you're done.
+antigen apply
