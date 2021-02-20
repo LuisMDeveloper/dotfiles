@@ -11,7 +11,7 @@
 4.  Checkout the actual content from the bare repository to your $HOME
     - `dot checkout`
 5.  Set the flag showUntrackedFiles to no on this specific (local) repository
-    - `dot config --local status.showUntrackedFiles no
+    - `dot config --local status.showUntrackedFiles no`
    
    
 Reference: https://www.atlassian.com/git/tutorials/dotfiles
